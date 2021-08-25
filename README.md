@@ -7,7 +7,7 @@ Fall 2021
 
 ## Specifications 
 
-* Dat will include 
+* Data will include 
 * Patient Name 
     * First name 
     * Last name 
