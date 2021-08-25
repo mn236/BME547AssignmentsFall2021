@@ -1,1 +1,2 @@
-# BME547AssignmentsFall2021
+# Health Database
+Author: Maryam Nuru
