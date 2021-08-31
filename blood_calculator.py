@@ -49,7 +49,7 @@ def hdl_output(HDL_value, HDL_character):
     return
 
 
-hdl_driver()
+hdl_driver()  # Runs code for hdl calculations
 
 
 def ldl_driver():
@@ -79,4 +79,4 @@ def ldl_output(LDL_value, LDL_character):
     return
 
 
-ldl_driver()
+ldl_driver()  # Runs code for ldl calculations
