@@ -50,3 +50,27 @@ def hdl_output(HDL_value, HDL_character):
 
 
 hdl_driver()
+
+
+def ldl_driver():
+    LDL_value = ldl_input()
+    return ldl_analysis(LDL_value)
+
+
+def ldl_input():
+    ldl_value = int(input("Enter LDL value :"))
+    return ldl_value
+
+
+def ldl_analysis(LDL_value):
+    if LDL_value < 130:
+        return "Normal"
+    elif 130 <= LDL_value < 159:
+        return "Borderline High"
+    elif 160 <= LDL_value < 189:
+        return "High"
+    else:
+        return "Very High"
+
+
+ldl_driver()
