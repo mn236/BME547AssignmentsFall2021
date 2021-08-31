@@ -54,7 +54,8 @@ hdl_driver()
 
 def ldl_driver():
     LDL_value = ldl_input()
-    return ldl_analysis(LDL_value)
+    LDL_character = ldl_analysis(LDL_value)
+    ldl_output(LDL_value, LDL_character)
 
 
 def ldl_input():
@@ -71,6 +72,11 @@ def ldl_analysis(LDL_value):
         return "High"
     else:
         return "Very High"
+
+
+def ldl_output(LDL_value, LDL_character):
+    print("The LDL value of {} is considered {}".format(LDL_value, LDL_character))
+    return
 
 
 ldl_driver()
