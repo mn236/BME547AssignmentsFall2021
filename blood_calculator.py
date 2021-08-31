@@ -50,3 +50,11 @@ def hdl_output(HDL_value, HDL_character):
 
 
 hdl_driver()
+
+
+def ldl_input():
+    ldl_value = int(input("Enter LDL value :"))
+    return ldl_value
+
+
+ldl_input()
