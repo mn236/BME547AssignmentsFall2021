@@ -6,6 +6,9 @@
 # Pull from Github
 # Repeat
 
+print("This is the database.py module")
+print("It's name is {}".format(__name__))
+
 
 def interface():
     print("Blood Calculator")
@@ -13,17 +16,24 @@ def interface():
     while keep_running:
         print("Make a choice")
         print("1 - HDL Analysis")
+        print("2 - LDL Analysis")
+        print("3 - Total Cholesterol Analysis")
         print("9 - Quit")
         choice = int(input("Make a choice: "))
         if choice == 9:
             keep_running = False
         elif choice == 1:
             hdl_driver()
+        elif choice == 2:
+            ldl_driver()
+        elif choice == 3:
+            total_driver()
 
         print(choice)
     return choice
 
 
+# *****************HDL********************
 def hdl_driver():
     HDL_value = hdl_input()
     HDL_character = hdl_analysis(HDL_value)
@@ -49,9 +59,7 @@ def hdl_output(HDL_value, HDL_character):
     return
 
 
-hdl_driver()  # Runs code for hdl calculations
-
-
+# *****************LDL******************
 def ldl_driver():
     LDL_value = ldl_input()
     LDL_character = ldl_analysis(LDL_value)
@@ -79,4 +87,31 @@ def ldl_output(LDL_value, LDL_character):
     return
 
 
+# ************Total Cholesterol***********
+
+
+def total_driver():
+    total_value = ldl_input() + hdl_input()
+    total_character = total_analysis(total_value)
+    total_output(total_value, total_character)
+
+
+def total_analysis(total_value):
+    if total_value < 200:
+        return "Normal"
+    elif 200 <= total_value < 240:
+        return "Borderline High"
+    else:
+        return "High"
+
+
+def total_output(total_value, total_answer):
+    print("The total cholesterol value of {} is considered {}".format(total_value, total_answer))
+    return
+
+
+if __name__ == "__main__":
+    interface()
+
+hdl_driver()  # Runs code for hdl calculations
 ldl_driver()  # Runs code for ldl calculations
