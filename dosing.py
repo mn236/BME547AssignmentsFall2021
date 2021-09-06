@@ -41,7 +41,11 @@ def dosage_output(weight, dosage_mg_first_day):
           .format(dosage_mg_first_day))
 
 
-if __name__ == '__main__':
+def program_driver():
     diagnosis, w_input = info_input()
     wt, dose_1 = calculate_dosage(diagnosis, w_input)
     dosage_output(wt, dose_1)
+
+
+if __name__ == '__main__':
+    program_driver()
