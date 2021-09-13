@@ -1,21 +1,11 @@
+import pytest
 
-def test_hdl_analysis_normal():
+@pytest.mark.parametrize("HDL_value, expected", [
+    (65, "Normal"),
+    (45, "Borderline Low"),
+    (15, "Low")]) #decorator so pytest can run multiple tests
+def test_hd_analysis(HDL_value, expected):
     from blood_calculator import hdl_analysis
-    answer = hdl_analysis(60)
-    expected = "Normal"
-    assert answer == expected
-
-
-def test_hdl_analysis_bl():
-    from blood_calculator import hdl_analysis
-    answer = hdl_analysis(45)
-    expected = "Borderline Low"
-    assert answer == expected
-
-
-def test_hdl_analysis_low():
-    from blood_calculator import hdl_analysis
-    answer = hdl_analysis(15)
-    expected = "Low"
+    answer = hdl_analysis(HDL_value)
     assert answer == expected
 
