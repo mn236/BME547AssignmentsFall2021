@@ -23,9 +23,7 @@ def main():
     except ValueError:
         print("Got value error")
     # except TypeError:
-        # print("Got Type Error")
-    except:
-        print("All other errors")
+    # print("Got Type Error")
 
 
 if __name__ == "__main__":

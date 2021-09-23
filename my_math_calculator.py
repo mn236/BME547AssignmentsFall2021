@@ -1,17 +1,17 @@
 def sqrt(n):
-
     if n <= 0:
-        raise ValueError ("sqrt cannot receive a negative number. You sent {}".format(n))
+        raise ValueError("sqrt cannot receive a negative number. You sent {}".format(n))
 
     x = n
     y = 1
 
     e = 0.000001
-    while(x - y > e):
-        x = (x + y)/2
+    while x - y > e:
+        x = (x + y) / 2
         y = n / x
 
     return x
+
 
 def add_positive_integers(a, b):
     if a < 0 or b < 0:
