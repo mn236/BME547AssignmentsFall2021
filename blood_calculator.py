@@ -20,9 +20,9 @@ def interface():
         print("3 - Total Cholesterol Analysis")
         print("9 - Quit")
         choice = int(input("Make a choice: "))
-        if choice == 9:
-            keep_running = False
-        elif choice == 1:
+        # if choice == 9:
+            # keep_running = False
+        if choice == 1:
             hdl_driver()
         elif choice == 2:
             ldl_driver()
@@ -113,5 +113,5 @@ def total_output(total_value, total_answer):
 if __name__ == "__main__":
     interface()
 
-#hdl_driver()  # Runs code for hdl calculations
-#ldl_driver()  # Runs code for ldl calculations
+# hdl_driver()  # Runs code for hdl calculations
+# ldl_driver()  # Runs code for ldl calculations
