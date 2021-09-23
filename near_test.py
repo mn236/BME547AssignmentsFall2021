@@ -1,5 +1,6 @@
-def add(a,b):
-    return a + b
+def add(f, d):
+    return f + d
+
 
 a = 1
 b = 2
